@@ -42,7 +42,7 @@
 }
 
 .my_scale {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transform-box: fill-box;
   transform-origin: 50% 50%;
 }
