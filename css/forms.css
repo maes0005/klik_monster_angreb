@@ -30,3 +30,130 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+/* Generelle styles */
+
+input {
+  border: 1px solid #ccc;
+  padding: 0.25rlh;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px #0001;
+}
+
+button {
+  border: 1px solid #74373b;
+  background-color: #74373b;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.25rlh 0.5rlh;
+  cursor: pointer;
+  align-items: end;
+}
+#navn_error,
+#email_error,
+#dato_tid_error,
+#sted_error,
+#beskrivelse_error,
+#accept_terms_error {
+  color: darkred;
+}
+
+.h1_indberet {
+  background-color: #74373b; /* vil have denne farve istedet for orange */
+  color: #fffae2;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* For layout */
+form {
+  display: grid;
+  align-items: center;
+  gap: 1rlh;
+  padding: 1rlh;
+  background-color: white;
+  border-radius: 15px;
+
+  .form_group {
+    display: grid;
+    gap: 0.1rlh;
+  }
+  label:has(input) {
+    display: flex;
+    align-items: center;
+    gap: 0.25rlh;
+    justify-self: start;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+  background-color: #dbe2f5;
+  border-radius: 6px;
+}
+
+/* Pseudo-classes */
+:focus-visible {
+  outline: 2px solid slateblue;
+  outline-offset: 1px;
+}
+
+/* Hover-styles */
+button:hover {
+  background: #4f2c2f;
+}
+
+/* Active-styles (imens man klikker) */
+button:active {
+  scale: 0.98;
+}
+
+/* Valideringsregler */
+#navn_error,
+#email_error,
+#dato_tid_error,
+#sted_error,
+#beskrivelse_error,
+#accept_terms_error {
+  display: none;
+}
+
+.form-group:has(:required) {
+  label::after {
+    content: "*";
+    color: red;
+  }
+}
+
+.form-group:has(:user-invalid) {
+  input {
+    outline: 3px solid #f005;
+    border-color: darkred;
+  }
+  .error-message {
+    display: block;
+  }
+}
+
+/* checkbox og radio */
+.checkbox_group label,
+.radio_group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 8px; /* lidt mellemrum mellem checkbox og tekst */
+}
+
+.form_group {
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  /* Sørg for at de ikke er for store */
+  width: 16px;
+  height: 16px;
+}
