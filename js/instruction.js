@@ -3,8 +3,8 @@ console.log("loaded instruction...");
 document.querySelector("#foerste").addEventListener("click", funk1);
 function funk1() {
   console.log("1. måde er loaded...");
+  document.querySelector("#oejenbryn").classList.add("my_scale");
   document.querySelector("#oejne").classList.add("my_scale");
-  document.querySelector("#oejne").computedStyleMap.fill = "green";
 
   document.querySelector(".info-text h2").textContent = "Irritation";
   document.querySelector(
@@ -15,6 +15,14 @@ Jo mere man reagerer, jo stærkere bliver de. Når du mærker pulsen stige, når
 
 Forbliv rolig. Tag dybe vejrtrækninger. Undgå øjenkontakt og enhver form for udbrud. Ignorér lyden. Det er din bedste chance.`;
 }
+
+/*dette tekstfelt kommer i alle infobokse*/
+/* document.querySelector(
+  "#efficiency"
+).textContent = `Forskning viser, at Klikmonstre trives i miljøer med høj irritation.
+Studier fra Institut for Lydpsykologisk Adfærd påviser, at selv et enkelt klik kan udløse stress hos 9 ud af 10 testpersoner.
+Jo mere vrede man føler, jo tydeligere bliver væsnet.
+Tålmodighed og ro anbefales som bedste forsvar.`; */
 
 document.querySelector("#anden").addEventListener("click", funk2);
 function funk2() {

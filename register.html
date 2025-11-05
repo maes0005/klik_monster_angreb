@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -48,46 +48,167 @@
           <p class="placeholder">Opsummering</p>
         </article>
       </section>
+
       <form>
-        <label for="Navn">Navn</label>
-        <input type="text" id="navn" name="navn" />
+        <h1 class="h1_indberet">INDBERETNING</h1>
+        <div class="form_group">
+          <label for="fulde_navn">Fulde navn</label>
+          <input
+            type="text"
+            id="navn"
+            name="navn"
+            aria-describedby="navn_error"
+            required
+          />
+          <p id="navn_error">Please enter a value</p>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <div class="form_group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            aria-describedby="email_error"
+            required
+          />
+          <p id="email_error">Please enter a value</p>
+        </div>
 
-        <label for="dato_tid">Dato og tid</label>
-        <input type="date" id="dato_tid" name="dato_tid" />
+        <div class="form_group">
+          <label for="dato_tid">Dato og tid for observationen</label>
+          <input
+            type="date"
+            id="dato_tid"
+            name="dato_tid"
+            aria-describedby="dato_tid_error"
+            required
+          />
+          <p id="dato_tid_error">Please enter a value</p>
+        </div>
 
-        <label for="sted">Sted for observation</label>
-        <input type="text" id="sted" name="sted" />
+        <div class="form_group">
+          <label for="sted">Sted for observation</label>
+          <input
+            type="text"
+            id="sted"
+            name="sted"
+            aria-describedby="sted_error"
+            required
+          />
+          <p id="sted_error">Please enter a value</p>
+        </div>
 
-        <label for="har_du_set">Har du set klikmonstret?</label>
-        <label for="ja">Ja</label>
-        <input type="radio" id="ja" name="har_du_set" value="ja" />
-        <label for="nej">Nej, kun hørt kliklyde</label>
-        <input type="radio" id="nej" name="har_du_set" value="nej" />
+        <div class="form_group">
+          <label for="har_du_set">Har du set klikmonstret?</label>
+          <div class="radio_group">
+            <label for="ja">
+              <input type="radio" id="ja" name="har_du_set" value="ja" />
+              Ja</label
+            >
 
-        <label for="beskrivelse">Kort beskrivelse af hændelsen</label>
-        <input type="text" id="beskrivelse" name="beskrivelse" />
+            <label for="nej">
+              <input type="radio" id="nej" name="har_du_set" value="nej" />
+              Nej, kun hørt kliklyde</label
+            >
+          </div>
+        </div>
 
-        <label for="tegn">Observerede tegn</label>
-        <label for="kliklyde">Kliklyde</label>
-        <input type="checkbox" id="tegn" name="tegn" value="tegn" />
-        <label for="kuglepen">Kuglepen i hånden</label>
-        <input type="checkbox" id="kuglepen" name="kuglepen" value="kuglepen" />
-        <label for="bid">Forsøg på bid</label>
-        <input type="checkbox" id="bid" name="bid" value="bid" />
+        <div class="form_group">
+          <label for="beskrivelse">Kort beskrivelse af hændelsen</label>
+          <input
+            type="text"
+            id="beskrivelse"
+            name="beskrivelse"
+            aria-describedby="beskrivelse_error"
+            required
+          />
+          <p id="beskrivelse_error">Please enter a value</p>
+        </div>
 
-        <label for="tegn">Eventuelle følger</label>
-        <label for="ingen">Ingen</label>
-        <input type="checkbox" id="ingen" name="ingen" value="ingen" />
-        <label for="bidemaerke">Bidemærke</label>
-        <input
-          type="checkbox"
-          id="bidemaerke"
-          name="bidemaerke"
-          value="bidemaerke"
-        />
+        <div class="form_group">
+          <label for="tegn">Observerede tegn</label>
+          <div class="checkbox_group">
+            <label for="kliklyde">
+              <input type="checkbox" id="tegn" name="tegn" value="tegn" />
+              Kliklyde</label
+            >
+
+            <label for="kuglepen">
+              <input
+                type="checkbox"
+                id="kuglepen"
+                name="kuglepen"
+                value="kuglepen"
+              />
+              Kuglepen i hånden</label
+            >
+
+            <label for="bid">
+              <input type="checkbox" id="bid" name="bid" value="bid" />
+              Forsøg på bid</label
+            >
+
+            <label for="aggressiv">
+              <input
+                type="checkbox"
+                id="aggressiv"
+                name="aggressiv"
+                value="aggressiv"
+              />
+              Aggressiv</label
+            >
+          </div>
+        </div>
+
+        <div class="form_group">
+          <label for="tegn">Eventuelle følger</label>
+          <div class="checkbox_group">
+            <label for="ingen">
+              <input type="checkbox" id="ingen" name="ingen" value="ingen" />
+              Ingen</label
+            >
+
+            <label for="bidemaerke">
+              <input
+                type="checkbox"
+                id="bidemaerke"
+                name="bidemaerke"
+                value="bidemaerke"
+              />
+              Bidemærke</label
+            >
+
+            <label for="soevnproblemer_genklikninger">
+              <input
+                type="checkbox"
+                id="soevnproblemer_genklikninger"
+                name="soevnproblemer_genklikninger"
+                value="soevnproblemer_genklikninger"
+              />
+              Søvnproblemer eller genklikninger om natten</label
+            >
+          </div>
+        </div>
+
+        <div class="form_group">
+          <label for="terms">
+            <div class="checkbox_group">
+              <input
+                type="checkbox"
+                id="terms"
+                name="accept_terms"
+                value="yes"
+                aria-describedby="accept_terms_error"
+                required
+              />
+              Accept terms
+            </div>
+          </label>
+          <p id="accept_terms_error">Please accept the terms</p>
+        </div>
+
+        <button>Indsend</button>
       </form>
     </main>
     <footer>
