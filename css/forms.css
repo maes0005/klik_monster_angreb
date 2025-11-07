@@ -58,27 +58,23 @@ button {
   color: darkred;
 }
 
-.h1_indberet {
-  background-color: #74373b; /* vil have denne farve istedet for orange */
-  color: #fffae2;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-align: center;
-}
-
 /* For layout */
 form {
   display: grid;
-  align-items: center;
   gap: 1rlh;
   padding: 1rlh;
-  background-color: white;
+  background-color: rgb(255, 250, 226);
   border-radius: 15px;
 
   .form_group {
     display: grid;
     gap: 0.1rlh;
   }
+
+  .undertitle_form {
+    font-weight: bold;
+  }
+
   label:has(input) {
     display: flex;
     align-items: center;
@@ -93,6 +89,22 @@ input[type="date"],
 input[type="password"] {
   background-color: #dbe2f5;
   border-radius: 6px;
+}
+
+.output {
+  background: rgb(255, 250, 226);
+  border-radius: 15px;
+  margin-top: 10rem;
+  line-height: 50px;
+  max-height: 45rem;
+}
+
+.output_titel {
+  font-weight: bold;
+}
+
+.output_titel span {
+  font-weight: normal;
 }
 
 /* Pseudo-classes */
