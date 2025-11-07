@@ -34,182 +34,230 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>INDBERETNING</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <form>
+            <div class="form_group">
+              <label for="fulde_navn" class="undertitle_form">Fulde navn</label>
+              <input
+                type="text"
+                id="navn"
+                name="navn"
+                aria-describedby="navn_error"
+                required
+              />
+              <p id="navn_error">Indsæt dit fulde navn</p>
+            </div>
+
+            <div class="form_group">
+              <label for="email" class="undertitle_form">Email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                aria-describedby="email_error"
+                required
+              />
+              <p id="email_error">Indsæt din e-mail</p>
+            </div>
+
+            <div class="form_group">
+              <label for="dato_tid" class="undertitle_form"
+                >Dato og tid for observationen</label
+              >
+              <input
+                type="date"
+                id="dato_tid"
+                name="dato_tid"
+                aria-describedby="dato_tid_error"
+                required
+              />
+              <p id="dato_tid_error">Indsæt dato og tid</p>
+            </div>
+
+            <div class="form_group">
+              <label for="sted" class="undertitle_form"
+                >Sted for observation</label
+              >
+              <input
+                type="text"
+                id="sted"
+                name="sted"
+                aria-describedby="sted_error"
+                required
+              />
+              <p id="sted_error">Indsæt sted</p>
+            </div>
+
+            <div class="form_group">
+              <label for="har_du_set" class="undertitle_form"
+                >Har du set klikmonstret?</label
+              >
+              <div class="radio_group">
+                <label for="ja">
+                  <input type="radio" id="ja" name="har_du_set" value="Ja" />
+                  Ja</label
+                >
+                <label for="nej">
+                  <input type="radio" id="nej" name="har_du_set" value="Nej" />
+                  Nej, kun hørt kliklyde</label
+                >
+              </div>
+            </div>
+
+            <div class="form_group">
+              <label for="beskrivelse" class="undertitle_form"
+                >Kort beskrivelse af hændelsen</label
+              >
+              <input
+                type="text"
+                id="beskrivelse"
+                name="beskrivelse"
+                aria-describedby="beskrivelse_error"
+                required
+              />
+              <p id="beskrivelse_error">Indsæt beskrivelse</p>
+            </div>
+
+            <div class="form_group">
+              <label for="tegn" class="undertitle_form">Observerede tegn</label>
+              <div class="checkbox_group">
+                <label for="kliklyde">
+                  <input
+                    type="checkbox"
+                    id="kliklyde"
+                    name="kliklyde"
+                    value="Kliklyde"
+                  />
+                  Kliklyde</label
+                >
+
+                <label for="kuglepen">
+                  <input
+                    type="checkbox"
+                    id="kuglepen"
+                    name="kuglepen"
+                    value="Kuglepind"
+                  />
+                  Kuglepen i hånden</label
+                >
+
+                <label for="bid">
+                  <input
+                    type="checkbox"
+                    id="bid"
+                    name="bid"
+                    value="Forsøg på bid"
+                  />
+                  Forsøg på bid</label
+                >
+
+                <label for="aggressiv">
+                  <input
+                    type="checkbox"
+                    id="aggressiv"
+                    name="aggressiv"
+                    value="Aggressiv"
+                  />
+                  Aggressiv</label
+                >
+              </div>
+            </div>
+
+            <div class="form_group">
+              <label for="foelger" class="undertitle_form"
+                >Eventuelle følger</label
+              >
+              <div class="checkbox_group">
+                <label for="soevnproblemer">
+                  <input
+                    type="checkbox"
+                    id="soevnproblemer"
+                    name="soevnproblemer"
+                    value="Søvnproblemer"
+                  />
+                  Søvnproblemer</label
+                >
+
+                <label for="bidemaerke">
+                  <input
+                    type="checkbox"
+                    id="bidemaerke"
+                    name="bidemaerke"
+                    value="Bidemærke"
+                  />
+                  Bidemærke</label
+                >
+
+                <label for="genklikninger">
+                  <input
+                    type="checkbox"
+                    id="genklikninger"
+                    name="genklikninger"
+                    value="Genklikninger om natten"
+                  />
+                  Genklikninger om natten</label
+                >
+              </div>
+            </div>
+
+            <div class="form_group">
+              <div class="checkbox_group">
+                <label for="vilkaar">
+                  <input
+                    type="checkbox"
+                    id="vilkaar"
+                    name="acceptere_vilkaar"
+                    value="Ja"
+                    aria-describedby="acceptere_vilkaar_error"
+                    required
+                  />
+                  Acceptere vilkårene
+                </label>
+              </div>
+              <p id="acceptere_vilkaar_error" class="error-message"></p>
+            </div>
+
+            <button>Indsend</button>
+          </form>
         </article>
         <form id="webform"></form>
       </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
+
+      <section class="output">
+        <h2>Klikmonster-rapport</h2>
+
+        <div>
+          <p class="output_titel">
+            Fulde navn: <span id="fulde_navn_output"></span>
+          </p>
+          <p class="output_titel">Email: <span id="email_output"></span></p>
+          <p class="output_titel">
+            Dato og tidspunkt: <span id="dato_tid_output"></span>
+          </p>
+          <p class="output_titel">Sted: <span id="sted_output"></span></p>
+          <p class="output_titel">
+            Har du set klikmonstret?: <span id="har_du_set_output"></span>
+          </p>
+          <p class="output_titel">
+            Kort beskrivelse af hændelsen: <span id="beskrivelse_output"></span>
+          </p>
+          <p class="output_titel">
+            Observerede tegn: <span id="tegn_output"></span>
+          </p>
+          <p class="output_titel">
+            Eventuelle følger: <span id="foelger_output"></span>
+          </p>
+          <p class="output_titel">
+            Accepterede vilkår: <span id="vilkaar_output"></span>
+          </p>
+        </div>
+
         <article>
-          <p class="placeholder">Opsummering</p>
+          <p class="placeholder"></p>
         </article>
       </section>
-
-      <form>
-        <h1 class="h1_indberet">INDBERETNING</h1>
-        <div class="form_group">
-          <label for="fulde_navn">Fulde navn</label>
-          <input
-            type="text"
-            id="navn"
-            name="navn"
-            aria-describedby="navn_error"
-            required
-          />
-          <p id="navn_error">Please enter a value</p>
-        </div>
-
-        <div class="form_group">
-          <label for="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            aria-describedby="email_error"
-            required
-          />
-          <p id="email_error">Please enter a value</p>
-        </div>
-
-        <div class="form_group">
-          <label for="dato_tid">Dato og tid for observationen</label>
-          <input
-            type="date"
-            id="dato_tid"
-            name="dato_tid"
-            aria-describedby="dato_tid_error"
-            required
-          />
-          <p id="dato_tid_error">Please enter a value</p>
-        </div>
-
-        <div class="form_group">
-          <label for="sted">Sted for observation</label>
-          <input
-            type="text"
-            id="sted"
-            name="sted"
-            aria-describedby="sted_error"
-            required
-          />
-          <p id="sted_error">Please enter a value</p>
-        </div>
-
-        <div class="form_group">
-          <label for="har_du_set">Har du set klikmonstret?</label>
-          <div class="radio_group">
-            <label for="ja">
-              <input type="radio" id="ja" name="har_du_set" value="ja" />
-              Ja</label
-            >
-
-            <label for="nej">
-              <input type="radio" id="nej" name="har_du_set" value="nej" />
-              Nej, kun hørt kliklyde</label
-            >
-          </div>
-        </div>
-
-        <div class="form_group">
-          <label for="beskrivelse">Kort beskrivelse af hændelsen</label>
-          <input
-            type="text"
-            id="beskrivelse"
-            name="beskrivelse"
-            aria-describedby="beskrivelse_error"
-            required
-          />
-          <p id="beskrivelse_error">Please enter a value</p>
-        </div>
-
-        <div class="form_group">
-          <label for="tegn">Observerede tegn</label>
-          <div class="checkbox_group">
-            <label for="kliklyde">
-              <input type="checkbox" id="tegn" name="tegn" value="tegn" />
-              Kliklyde</label
-            >
-
-            <label for="kuglepen">
-              <input
-                type="checkbox"
-                id="kuglepen"
-                name="kuglepen"
-                value="kuglepen"
-              />
-              Kuglepen i hånden</label
-            >
-
-            <label for="bid">
-              <input type="checkbox" id="bid" name="bid" value="bid" />
-              Forsøg på bid</label
-            >
-
-            <label for="aggressiv">
-              <input
-                type="checkbox"
-                id="aggressiv"
-                name="aggressiv"
-                value="aggressiv"
-              />
-              Aggressiv</label
-            >
-          </div>
-        </div>
-
-        <div class="form_group">
-          <label for="tegn">Eventuelle følger</label>
-          <div class="checkbox_group">
-            <label for="ingen">
-              <input type="checkbox" id="ingen" name="ingen" value="ingen" />
-              Ingen</label
-            >
-
-            <label for="bidemaerke">
-              <input
-                type="checkbox"
-                id="bidemaerke"
-                name="bidemaerke"
-                value="bidemaerke"
-              />
-              Bidemærke</label
-            >
-
-            <label for="soevnproblemer_genklikninger">
-              <input
-                type="checkbox"
-                id="soevnproblemer_genklikninger"
-                name="soevnproblemer_genklikninger"
-                value="soevnproblemer_genklikninger"
-              />
-              Søvnproblemer eller genklikninger om natten</label
-            >
-          </div>
-        </div>
-
-        <div class="form_group">
-          <label for="terms">
-            <div class="checkbox_group">
-              <input
-                type="checkbox"
-                id="terms"
-                name="accept_terms"
-                value="yes"
-                aria-describedby="accept_terms_error"
-                required
-              />
-              Accept terms
-            </div>
-          </label>
-          <p id="accept_terms_error">Please accept the terms</p>
-        </div>
-
-        <button>Indsend</button>
-      </form>
     </main>
     <footer>
       <nav class="some">
@@ -239,5 +287,6 @@
     </footer>
     <script src="js/burger.js"></script>
     <!-- <script src="js/main.js"></script> -->
+    <script src="js/form.js"></script>
   </body>
 </html>
