@@ -1,9 +1,9 @@
 :root {
   /* Colours */
-  --color-bg: #fceb94; /* page background /*
+  --color-bg: #f4e6a4; /* page background /*
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: #74373b;
 
   /* Logotype */
   --color-logotype-bg: black;
@@ -38,11 +38,11 @@
 
   /* Cards */
   --color-card-bg: #fff;
-  --color-cta-card-bg: #ff4b00;
+  --color-cta-card-bg: #74373b;
   /* news-cards */
   --color-news-bg: #fffae2;
   --color-news-bg-inverted: #dbe2f5;
-  --color-cta-newscard-bg: #ffa680;
+  --color-cta-newscard-bg: #926467;
   --color-cta-newscard-bg-inverted: #6f90eb;
 
   /* Fonts */
