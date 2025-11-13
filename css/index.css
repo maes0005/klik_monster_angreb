@@ -1,0 +1,96 @@
+[popover]::backdrop {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+[popover] {
+  max-width: 60vh;
+  max-height: 90ch;
+  width: 90vw;
+  margin: 30px auto;
+  padding: 20px;
+  position: fixed;
+}
+
+/* Popover_1 */
+#popover_1 {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+#popover_1 h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+#popover_1 h3 {
+  font-size: 20px;
+}
+/* SLUT Popover_1 */
+
+/* Popover_2 */
+#popover_2 {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+#popover_2 h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+#popover_2 h3 {
+  font-size: 20px;
+}
+#popover_2 ul,
+#popover_2 ol {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-inline-start: 1.25rem;
+}
+/* SLUT Popover_2 */
+
+/* Popover_3 */
+#popover_3 {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+#popover_3 h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* SLUT Popover_3 */
+
+.news_card {
+  border: none;
+}
+
+/* accordion */
+summary::after {
+  font-family: system-ui;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-left: auto;
+}
+
+.daily_text ul,
+.daily_text ol {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-inline-start: 1.25rem;
+  max-width: 28rem;
+}
+
+.daily_card img {
+  width: 15rem;
+}
+
+#main-disclamer img {
+  width: 10rem;
+  height: auto;
+}
+
+#logotype-wrapper svg {
+  width: 200px; /* ønsket bredde */
+  height: auto; /* højden tilpasses proportionelt */
+  display: block; /* fjerner inline whitespace */
+  padding: 10px;
+  margin: 10px;
+}
