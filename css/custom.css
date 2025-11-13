@@ -6,15 +6,15 @@
   --color-head-bg: #74373b;
 
   /* Logotype */
-  --color-logotype-bg: black;
+  --color-logotype-bg: #fffae2;
   --color-text-logotype: #fffae2;
   --font-logotype-size: 2rem;
 
   /* Global menu */
-  --color-menu-bg: #6f90eb;
+  --color-menu-bg: #8da3df;
   /* Links */
-  --color-link-bg: #fff;
-  --color-link-hover: #fff; /* used */
+  --color-link-bg: #74373b;
+  --color-link-hover: #8da3df; /* used */
   --color-link-active: #99958f; /* used */
   --border-radius-links: 1px;
 
