@@ -16,7 +16,7 @@
   --color-link-bg: #74373b;
   --color-link-hover: #8da3df; /* used */
   --color-link-active: #99958f; /* used */
-  --border-radius-links: 1px;
+  --border-radius-links: 15px;
 
   /* Headlines og rubrik */
   --font-h1-size: 1rem;
