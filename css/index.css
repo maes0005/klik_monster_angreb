@@ -1,3 +1,16 @@
+/* Overskrift */
+.index_overskrifter {
+  margin-top: 3rem;
+  line-height: 4rem;
+}
+.index_h1 {
+  font-size: 40px;
+}
+.sub {
+  font-size: 30px;
+}
+
+/* Popover */
 [popover]::backdrop {
   backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.3);
@@ -85,12 +98,4 @@ summary::after {
 #main-disclamer img {
   width: 10rem;
   height: auto;
-}
-
-#logotype-wrapper svg {
-  width: 200px; /* ønsket bredde */
-  height: auto; /* højden tilpasses proportionelt */
-  display: block; /* fjerner inline whitespace */
-  padding: 10px;
-  margin: 10px;
 }
