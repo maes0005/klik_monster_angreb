@@ -36,9 +36,11 @@
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
   background-color: var(--color-infobox-1-bg);
+  color: var(--color-infobox-text);
 }
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
+  color: var(--color-infobox-text);
 }
 
 .my_scale {
