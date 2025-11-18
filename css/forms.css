@@ -63,7 +63,6 @@ form {
   display: grid;
   gap: 1rlh;
   padding: 1rlh;
-  background-color: rgb(255, 250, 226);
   border-radius: 15px;
 
   .form_group {
@@ -91,12 +90,12 @@ input[type="password"] {
   border-radius: 6px;
 }
 
-.output {
+#output {
   background: rgb(255, 250, 226);
   border-radius: 15px;
-  margin-top: 10rem;
   line-height: 50px;
   max-height: 45rem;
+  background-color: var(--summary-background-color);
 }
 
 .output_titel {

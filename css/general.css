@@ -2,7 +2,26 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+
+  /* Light/dark mode */
+  color-scheme: light;
 }
+html.dark {
+  color-scheme: dark;
+}
+
+#dark_mode {
+  padding: 10px;
+  margin-left: 68rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fffae2;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #627095;
+  font-weight: bold;
+}
+/* Light/dark mode SLUT*/
 
 header {
   height: min-content;
@@ -96,7 +115,7 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: 5.7rem;
 }
 
 #logotype-wrapper > a {
@@ -125,6 +144,10 @@ header nav li a {
   border-radius: var(--border-radius-links);
 }
 
+.menuItem {
+  color: var(--color-text-menu);
+}
+
 /* Pilen efter menu-tekst */
 header > nav li > a:after {
   content: " \2192";
@@ -138,7 +161,6 @@ nav a:hover {
 nav a:active {
   background-color: var(--color-link-active);
 }
-*/
 
 /* FOOTER */
 footer a {
